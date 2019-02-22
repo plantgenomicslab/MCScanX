@@ -81,9 +81,18 @@ Here is a typical parameter setting for generating the xyz.blast file::
 
  blastp  -query  query  -db database -evalue 1e-10 -max_target_seqs 5 -outfmt 6  -out xyz.blast
  
- 
+BLAST format::
+remove alternative splicing
+```sed -i -r 's/\.[0-9]\t/\t/g' xyz.blast```
  	
-USE GFF::
+USE GFF in weird format::
+```python -m jcvi.formats.gff bed Athaliana_447_Araport11.gene.gff3  >> xyz.bed```
+```awk '{print $1"\t"$4"\t"$2"\t"$3}' xyz.bed | sed 's/\.Araport11\.447//'g >> a ```
+```mv a xyz.gff```
+
+MCScanX will read both ```.gff``` and ```.blast```
+
+
 
 It is advised that to make MCscanX generate more reasonable results, the number of BLASTP hits for a gene should be restricted to around top 5.
 When you have `xyz.blast` and `xyz.gff` ready, put them in the same folder. Then you can simply use::
