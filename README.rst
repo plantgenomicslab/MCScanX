@@ -25,6 +25,9 @@ Prerequisite
 javac (JDK) needed
 https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
 
+NCBI-BLAST+
+ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.31/
+
 
 Installation
 -------------
@@ -76,8 +79,8 @@ The xyz.blast file is simply the direct BLASTP output of m8 format as following:
   
 Here is a typical parameter setting for generating the xyz.blast file::
 
-	$blastp  -i  query_file  -d database  -e 1e-10 -max_target_seq -m 8 -o xyz.blast
-  
+	$blastp  -i  query_file  -d database  -e 1e-10 -max_target_seqs 5 -outfmt 6  -o xyz.blast
+	
 The xyz.bed file holds gene positions, following a tab-delimited format::
 
 	chr#	starting_position	ending_position	gene
