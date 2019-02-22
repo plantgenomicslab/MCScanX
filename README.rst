@@ -83,14 +83,18 @@ Here is a typical parameter setting for generating the xyz.blast file::
  
 BLAST format::
 remove alternative splicing
-```sed -i -r 's/\.[0-9]\t/\t/g' xyz.blast```
+
+	$ sed -i -r 's/\.[0-9]\t/\t/g' xyz.blast
  	
 USE GFF in weird format::
-```python -m jcvi.formats.gff bed Athaliana_447_Araport11.gene.gff3  >> xyz.bed```
-```awk '{print $1"\t"$4"\t"$2"\t"$3}' xyz.bed | sed 's/\.Araport11\.447//'g >> a ```
-```mv a xyz.gff```
 
-MCScanX will read both ```.gff``` and ```.blast```
+	$ python -m jcvi.formats.gff bed Athaliana_447_Araport11.gene.gff3  >> xyz.bed
+
+	$ awk '{print $1"\t"$4"\t"$2"\t"$3}' xyz.bed | sed 's/\.Araport11\.447//'g >> a
+
+	$ mv a xyz.gff
+
+MCScanX will read both ``.gff`` and ``.blast``
 
 
 
