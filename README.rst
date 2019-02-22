@@ -20,11 +20,14 @@ All programs are executed using command line options on Linux systems or Mac OS.
 All code is copiable, distributable, modifiable, and usable without any restrictions.
 Contact: Yupeng Wang, wyp1125@uga.edu; Xu Tan, tanxu87@gmail.com
 
-Installation
+Prerequisite
 -------------
 javac (JDK) needed
-
 https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
+
+
+Installation
+-------------
 
 
 Make
