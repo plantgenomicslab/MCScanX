@@ -1,4 +1,6 @@
 #include "dissect_multiple_alignment.h"
+#include <unistd.h>
+
 
 void read_gff(char* path)
 {

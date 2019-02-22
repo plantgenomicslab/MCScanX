@@ -1,5 +1,5 @@
 #include "detect_collinear_tandem_arrays.h"
-
+#include <unistd.h>
 void read_gff(char* path)
 {
     if (!ifstream(path))
