@@ -156,6 +156,16 @@ The output is a text file in the same directory with input files named xyz.gene_
 Note:  0, 1, 2, 3, 4 stand for singleton, dispersed, proximal, tandem, segmental respectively.
 It is not reasonable to apply this program to data of multiple genomes.
 
+- Example 
+```
+Type of dup     Code    Number
+Singleton       0       25849
+Dispersed       1       11931
+Proximal        2       1958
+Tandem  3       2344
+WGD or segmental        4       6374
+```
+
 
 Downstream analyses
 :::::::::::::::::::::
